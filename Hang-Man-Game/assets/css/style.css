@@ -1,0 +1,71 @@
+body{
+	background-color: Lightgreen;
+}
+
+header{
+	border: 10px solid red;
+	width:960px;
+	height: 160px;
+	margin:0 auto;
+	font-size: 20px;
+	text-align: center;
+	font-family: 'Bangers', cursive;
+	font-family: 'Kalam', cursive;
+	font-family: 'Merriweather Sans', sans-serif;
+	font-family: 'Monoton', cursive;
+	font-family: 'Audiowide', cursive;
+}
+
+.HangmanPicture{
+	margin:-14px auto;
+	width: 160px;
+	padding:35px;
+}
+
+.FoodPicture{
+	padding: 165px;
+}
+
+.Scores{
+	border: 10px solid red;
+	padding: 20px
+	width:960px;
+	height: 100px;
+	margin:0 auto;
+	font-size: 20px;
+	text-align: center;
+	font-family: 'Bangers', cursive;
+	font-family: 'Kalam', cursive;
+	font-family: 'Merriweather Sans', sans-serif;
+	font-family: 'Monoton', cursive;
+	font-family: 'Audiowide', cursive;
+}
+
+.bestAnswer{
+	border: 10px solid red;
+	width:960px;
+	height: 100px;
+	margin:0 auto;
+	font-size: 30px;
+	text-align: center;
+	font-family: 'Bangers', cursive;
+	font-family: 'Kalam', cursive;
+	font-family: 'Merriweather Sans', sans-serif;
+	font-family: 'Monoton', cursive;
+	font-family: 'Audiowide', cursive;
+}
+
+.poorAnswer{
+	border: 10px solid red;
+	width:960px;
+	height: 100px;
+	margin:0 auto;
+	font-size: 30px;
+	text-align: center;
+	font-family: 'Bangers', cursive;
+	font-family: 'Kalam', cursive;
+	font-family: 'Merriweather Sans', sans-serif;
+	font-family: 'Monoton', cursive;
+	font-family: 'Audiowide', cursive;
+
+}

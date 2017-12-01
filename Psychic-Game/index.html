@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Psychic Game</title>
+	</head>
+<body>
+		<h1>The Psychic Game</h1>
+	<h2>Guess what vowel letter I'm thinking of</h2>
+<div id="Psychic Game">
+	<p>Press A,E,I,O,U To Begin Playing!</p>
+
+	<p>Wins</p>
+	<p>Loss</p>
+	<p>Tie </p>
+</div>
+<!--
+	Things to do: 
+	I need the User to make a choice 
+	I need the computer to make a choice 
+	Setup program to capture the choices by user and computer
+	Setup page to compare both answers and decide if the user has picked the matching letter
+	Ask the User To Guess a Letter The Computer is thinking! 
+	Setup user input for user to pick a random letter to win loss or tie!
+	Setup Computer Output 
+	Calculate and display: Wins Losses & Ties to user!
+
+
+-->
+
+<script type="text/javascript">
+
+	var vowelOptions=["a","e","i","o","u",];
+	var cpuChoice= vowelOptions[Math.floor(Math.random() *vowelOptions.length)];
+	var wins=0;
+	var losses=0;
+	
+
+	
+
+	document.onkeyup = function(event) {
+    var userPick = String.fromCharCode(event.keyCode).toLowerCase();
+
+    console.log(userPick);
+    console.log(cpuChoice);
+
+    if (userPick=="a"||=="e"||=="i"||=="o"||=="u"){
+    	if ((userPick=='a')&&(cpuChoice=='a')){
+    		wins++
+    		alert("You Win!"+ wins);
+    	}
+    	if ((userPick=='e')&&(cpuChoice=='e')){
+    		win++
+    		alert("You Win!"+ wins);
+    	}
+   		if ((userPick=='i')&&(cpuChoice=='i')){
+   			wins++
+   			alert("You Win!"+ wins);
+   		}
+    	if ((userPick=='o')&&(cpuChoice=='o')){
+    		wins++
+    		alert("You Win!"+ wins);
+    	}
+		if ((userPick=='u')&&(cpuChoice=='u')){
+			wins++
+			alert("You Win!"+ wins);
+		}
+		if ((userPick=='a')&&(cpuChoice=='u')){
+			losses++
+			alert("You lose!"+ losses);
+		}
+		if((userPick=='e')&&(cpuChoice=='i')){
+			losses++
+			alert("You lose!"+ losses);
+		}
+		if ((userPick=='i')&&(cpuChoice=='o')){
+			losses++
+			alert("You lose!"+ losses);
+		}
+		if ((userPick=='o')&&(cpuChoice=='e')){
+			losses++
+			alert("You lose!"+ losses);
+		}
+		if ((userPick=='u')&&(cpuChoice=='a')){
+			losses++
+			alert("You lose!"+ losses);
+		}else{
+			alert("Choose correct letter");
+		}
+		var html = "<p>Press A,E,I,O,U To Begin Playing!</p>"+ "<p>wins:"+ wins + "</p>"+ "<p>losses:" + losses + "</p>";
+
+		document.querySelector("#game").innerHTML= html;
+	}
+	
+	</script>
+
+</script>
+
+
+
+
+	
+	
+</body>
+</html>
