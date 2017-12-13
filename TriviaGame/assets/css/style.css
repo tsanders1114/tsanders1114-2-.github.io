@@ -1,0 +1,32 @@
+
+.jumbotron{
+	font-family: 'Bangers', cursive;
+	font-family: 'Kalam', cursive;
+	font-family: 'Merriweather Sans', sans-serif;
+	font-family: 'Monoton', cursive;
+	font-family: 'Orbitron', sans-serif;
+	background-image: url("https://images8.alphacoders.com/416/thumb-1920-416530.jpg");
+}
+section{
+	min-height: 400px;
+	background-image: url("https://wallpapercave.com/wp/kUtouXb.jpg");
+	margin: auto;
+	text-align: center;
+	font-family: 'Bangers', cursive;
+	font-family: 'Kalam', cursive;
+	font-family: 'Merriweather Sans', sans-serif;
+	font-family: 'Monoton', cursive;
+	font-family: 'Orbitron', sans-serif;
+}
+
+
+h2{
+	color: green;
+}
+
+h3{
+	color: yellow;
+}
+
+
+
