@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>GifTastic Homework</title>
+</head>
+
+<body>
+  
+    <button data-people="Kobe Bryant">Black Mamba</button>
+    <button data-people="Kyrie Irving">Uncle Drew</button>
+    <button data-people="Lebron James">The King</button>
+    <button data-people="Allen Iverson">The Answer</button>
+    <button data-people="Chris Anderson">Bird Man</button>
+    <button data-people="Carmelo Anthony">Melo</button>
+    <button data-people="Giannis Antetokounmpo">Greek Freak</button>
+    <button data-people="DeMarcus Cousins">Boogie</button>
+  
+
+    <button data-search="Hamburgers" type="button" class="btn btn-info">Hamburgers</button>
+    <button data-search="Tacos" type="button" class="btn btn-info">Tacos</button>
+    <button data-search="Chicken" type="button" class="btn btn-info">Chicken Wings</button>
+    <button data-search="Pickles" type="button" class="btn btn-info">Pickles</button>
+    <button data-search="Ham" type="button" class="btn btn-info">Ham</button>
+    <button data-search="Chili" type="button" class="btn btn-info">Chili</button>
+    <button data-search="BBQ Ribs" type="button" class="btn btn-info">BBQ Ribs</button>
+  
+
+  
+  <div id="allGifsAreHere"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <script type="text/javascript">
+
+   $("button").on("click", function(){
+    var nba= $(this).data("people");
+      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+        nba + "&api_key=dc6zaTOxFJmzC&limit=10";
+        
+        $.ajax({url:queryURL,method:"GET"})
+          .done(function(response){
+            for(var i=0;i<response.data.length;i++){
+              var peopleDiv=$("<div>");
+              var p=$("<p>").text("Rating: "+response.data[i].rating);
+              var peopleImage=$("<img>");
+              peopleImage.attr('src',response.data[i].images.fixed_height.url);
+              peopleDiv.append(p);
+              peopleDiv.append(peopleImage);
+            $("allGifsAreHere").append(peopleDiv);
+
+            };
+          };
+          
+
+          
+        });
+
+   });
+       
+
+  </script>
+</body>
